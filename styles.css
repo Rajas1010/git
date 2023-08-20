@@ -1,15 +1,14 @@
 body {
 	margin: 0;
-   font-family: "Times New Roman", Times, serif;
-   font-size: 20px;
-   background-image:url('../images/navy2.jpg');
-   background-color:rgba(0, 0, 0, 0.5);
-   position:relative;
+   	font-family: "Times New Roman", Times, serif;
+   	font-size: 20px;
+   	background:linear-gradient( 45deg, #004e92, #000428);
+   	position:relative;
 }
 button{
 	top:0;
 	right:0;
-	font-size: 10px;
+	font-size: 12px;
 	padding: 10px 20px 10px 20px;
 	color: white;
 	background: linear-gradient(45deg, #2b2f73,#405cf5);
