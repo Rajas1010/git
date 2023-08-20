@@ -1,0 +1,107 @@
+body {
+	margin: 0;
+   font-family: "Times New Roman", Times, serif;
+   font-size: 20px;
+   background-image:url('navy.jpg');
+   background-color:rgba(0, 0, 0, 0.5);
+   position:relative;
+}
+button{
+	top:0;
+	right:0;
+	font-size: 10px;
+	padding: 10px 20px 10px 20px;
+	color: white;
+	background: linear-gradient(45deg, #2b2f73,#405cf5);
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+  .glow-on-hover {
+		position: absolute;
+		margin-top: 10px;
+		margin-right:10px;
+    }
+	
+	.Python, .Java, .Html{
+		margin: 10px;
+	}
+
+    .glow-on-hover:hover {
+      transform: scale(1.05); /* Slightly scale up on hover */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+    } 
+	
+	.Python:hover, .Java:hover, .Html:hover{
+		transform: scale(1.05); /* Slightly scale up on hover */
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Shadow on hover */
+    }
+	
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0;
+  }
+  
+  .container1,body, span, div, table{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.text span {
+  font-size: 60px;
+  padding: 0 10px;
+  text-transform: uppercase;
+  color: #fff;
+  animation: zoomup 1.5s linear infinite;
+  animation-delay: calc(100ms * var(--i));
+}
+
+@keyframes zoomup {
+  0%, 100% {
+    color: white;
+    filter: blur(1px);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 60px #fff, 0 0 80px #fff, 0 0 100px #fff ,0 0 120px #fff;
+  }
+  5%, 95% {
+    filter: blur(0);
+    color: #fff;
+    text-shadow: none;
+  }
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: auto;
+  margin: 0;
+  padding-bottom: 40px;
+ color:white;
+}
+
+.gradient-table {
+  width: 80%;
+  margin-top: 20px;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+.gradient-table th, .gradient-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.gradient-table tbody tr:hover {
+  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.7);
+  transform: translateY(-5px);
+  transform: translateX(10px);
+  transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+

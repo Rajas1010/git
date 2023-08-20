@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradient Table with Hover Pop-up</title>
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+<div class="container1">
+  <div class="text">
+    <span style="--i:1">G</span>
+    <span style="--i:2">I</span>
+    <span style="--i:3">T</span>
+    <span style="--i:4"> </span>
+    <span style="--i:5">C</span>
+    <span style="--i:6">o</span>
+    <span style="--i:7">m</span>
+    <span style="--i:8">m</span>
+    <span style="--i:9">a</span>
+    <span style="--i:10">n</span>
+    <span style="--i:11">d</span>
+    <span style="--i:12">s</span>
+
+  </div>
+</div>
+ <button class="glow-on-hover" id="downloadButton">Download Git</button>
+
+    <script>
+        // Get a reference to the button element
+        var downloadButton = document.getElementById("downloadButton");
+
+        // Add a click event listener to the button
+        downloadButton.addEventListener("click", function() {
+            // Redirect the user to the specified link when the button is clicked
+            window.location.href = "https://github.com/git-for-windows/git/releases/download/v2.41.0.windows.3/Git-2.41.0.3-64-bit.exe";
+        });
+    </script>
+  <div class="table-container">
+    <table class="gradient-table">
+       <thead>
+    <tr>
+      <th>#</th>
+      <th>Command</th>
+      <th>Description</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td ondblclick="copyToClipboard(this)">git --version</td>
+      <td>"To check whether Git is installed or not."</td>
+      <td>Shows the installed Git version, e.g., git version 2.38.1.windows.1 (in cmd)</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td ondblclick="copyToClipboard(this)">mkdir github &amp;&amp; cd github</td>
+      <td>"Open the command prompt and create a directory using the 'mkdir' command (e.g., mkdir github). Then navigate to that directory using the 'cd' command (e.g., cd github)."</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td ondblclick="copyToClipboard(this)">git init</td>
+      <td>"git init" is used to turn a directory into a Git repository.</td>
+      <td>Generates a '.git' folder within the specified directory.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td ondblclick="copyToClipboard(this)">git status</td>
+      <td>"To view the status of the working directory and staged changes in the repository."</td>
+      <td>(in cmd) On branch main (or) branch name &nbsp; &nbsp; &nbsp; No commits yet<br> 
+        &nbsp; &nbsp; &nbsp; Nothing to commit (or) Changes to be committed:</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td ondblclick="copyToClipboard(this)">git config --global user.name</td>
+      <td>"To view the globally configured Git username."</td>
+      <td>Displays the globally configured Git username.</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td ondblclick="copyToClipboard(this)">git config --global user.email</td>
+      <td>"To view the globally configured Git email."</td>
+      <td>Displays the globally configured Git email.</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td ondblclick="copyToClipboard(this)">git config --global --unset user.name</td>
+      <td>"To remove the globally configured Git username."</td>
+      <td>Removes the globally configured Git username.</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td ondblclick="copyToClipboard(this)">git config --global --unset user.email</td>
+      <td>"To remove the globally configured Git email."</td>
+      <td>Removes the globally configured Git email.</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td ondblclick="copyToClipboard(this)">git add .</td>
+      <td>"To stage changes for commit in Git."</td>
+      <td>Adds the changes in your working directory to the staging area for the next commit.</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td ondblclick="copyToClipboard(this)">git commit -m "FisrtCommit"</td>
+      <td>"To record changes made to the repository with a message describing the changes."</td>
+      <td>(in cmd) [master (root-commit) c8595da] FisrtCommit<br>
+          1 file changed, 1 insertion(+)<br>
+          create mode 100644 hello.py</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td ondblclick="copyToClipboard(this)">git config --global user.name "Rajas1010"</td>
+      <td>"To set the globally configured Git email."</td>
+      <td>Use the 'git config --global user.name' command it shows your configured user name </td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td ondblclick="copyToClipboard(this)">git config --global user.email "Rajasekar.Rj100@gmail.com"</td>
+      <td>"To set the globally configured Git email."</td>
+      <td>Use the 'git config --global user.email' command it shows your configured user email</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td ondblclick="copyToClipboard(this)">git log</td>
+      <td>"To display the commit history of the repository."</td>
+      <td>Shows the commit history of the repository.</td>
+    </tr>
+    <tr>
+      <td colspan="4" style="text-align: center;"><b>Git Branch Commands</b></td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td ondblclick="copyToClipboard(this)">git branch</td>
+      <td>"To list all branches in the repository."</td>
+      <td>Displays a list of all branches in the repository.</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td ondblclick="copyToClipboard(this)">git branch NewBranch</td>
+      <td>"To create a new branch named 'NewBranch'."</td>
+      <td>Creates a new branch called 'NewBranch'.</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td ondblclick="copyToClipboard(this)">git checkout NewBranch</td>
+      <td>"To switch to the 'NewBranch' branch."</td>
+      <td>Switched to branch 'NewBranch'<br>Changes the active branch to 'NewBranch'.</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td ondblclick="copyToClipboard(this)">git checkout main</td>
+      <td>"To switch back to the 'main' branch."</td>
+      <td>Changes the active branch back to 'main'.</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td ondblclick="copyToClipboard(this)">git merge NewBranch</td>
+      <td>"To merge changes from 'NewBranch' into the current branch."</td>
+      <td>Merges the changes from 'NewBranch' into the current branch.</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td ondblclick="copyToClipboard(this)">git branch -d NewBranch</td>
+      <td>"To delete the 'NewBranch' branch (if merged)."</td>
+      <td>Deletes the 'NewBranch' branch if it's already merged.</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td ondblclick="copyToClipboard(this)">git checkout -b SecondBranch</td>
+      <td>"To create and switch to a new branch named 'SecondBranch'."</td>
+      <td>Creates and switches to a new branch called 'SecondBranch'.</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td ondblclick="copyToClipboard(this)">git branch -D SecondBranch</td>
+      <td>"To forcefully delete the 'NewBranch' branch (regardless of merge status)."</td>
+      <td>Deletes the 'NewBranch' branch forcefully.</td>
+    </tr>
+    <tr>
+      <td colspan="4" style="text-align: center;"><b>Advanced Commands</b></td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td ondblclick="copyToClipboard(this)">echo.>f1</td>
+       <td>"To Create empty file"</td>
+    <td>File created in the corresponding directory</td>
+     </tr>
+    <tr>
+      <td>23</td>
+      <td ondblclick="copyToClipboard(this)">dir /b</td>
+      <td>"View the list of files"</td>
+    <td>List of files</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td ondblclick="copyToClipboard(this)">type f1.txt</td>
+        <td>"To display the contents of the 'f1.txt' file"</td>
+    <td>Displays the contents of the 'f1.txt' file.</td>
+
+    </tr>
+    <tr>
+      <td>25</td>
+      <td ondblclick="copyToClipboard(this)">git cherry-pick </td>
+      <td>"To temporarily save changes in a stash, including untracked files."</td>
+      <td>Stashes changes, including untracked files, for later retrieval.</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td ondblclick="copyToClipboard(this)">git stash</td>
+      <td>"To temporarily save changes in a stash, including untracked files."</td>
+      <td>Stashes changes, including untracked files, for later retrieval.</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td ondblclick="copyToClipboard(this)">git stash list</td>
+      <td>"To list all stashes created in the repository."</td>
+      <td>Displays a list of all stashes in the repository.</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td ondblclick="copyToClipboard(this)">git stash show</td>
+      <td>"To show the changes stored in the most recent stash."</td>
+      <td>Displays the changes stored in the most recent stash.</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td ondblclick="copyToClipboard(this)">git stash apply</td>
+      <td>"To apply the changes from the most recent stash."</td>
+      <td>Applies the changes from the most recent stash to the working directory.</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td ondblclick="copyToClipboard(this)">git restore --staged f2</td>
+         <td>"To unstage changes from the staging area."</td>
+    <td>Removes changes from the staging area, but preserves them in the working directory.</td>
+ 
+    </tr>
+    <tr>
+      <td>31</td>
+      <td ondblclick="copyToClipboard(this)">git stash pop 0</td>
+         <td>"To apply and remove the most recent stash."</td>
+    <td>Applies and removes the most recent stash from the list of stashes.</td>
+ 
+    </tr>
+    <tr>
+      <td>32</td>
+      <td ondblclick="copyToClipboard(this)">git log --oneline</td>
+      <td>"To display a compact version of the commit history."</td>
+      <td>Displays a concise commit history with each commit on a single line.</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td ondblclick="copyToClipboard(this)">git revert 7af537f</td>
+      <td>"To create a new commit that undoes the changes introduced by the specified commit."</td>
+      <td>Creates a new commit that reverts the changes made by commit '7af537f'.</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td ondblclick="copyToClipboard(this)">git revert HEAD</td>
+      <td>"To create a new commit that undoes the changes introduced by the last commit."</td>
+      <td>Creates a new commit that reverts the changes made by the last commit.</td>
+    </tr>
+    <tr>
+      <td colspan="4" style="text-align: center;"><b>Remote Commands</b></td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td ondblclick="copyToClipboard(this)">git remote add origin https://github.com/Rajas1010/Commands.git</td>
+      <td>"To associate the remote repository URL with the name 'origin'."</td>
+      <td>Associates the remote repository URL with the name 'origin'.</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td ondblclick="copyToClipboard(this)">git remote -v</td>
+       <td>"To view remote repositories linked to the current repository."</td>
+    <td>Displays a list of remote repositories associated with the current repository.</td>
+ 
+    </tr>
+    <tr>
+      <td>37</td>
+      <td ondblclick="copyToClipboard(this)">git clone https://github.com/Rajas1010/Commands.git</td>
+      <td>"To clone a remote repository to your local machine."</td>
+      <td>Creates a local copy of the remote repository.</td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td ondblclick="copyToClipboard(this)">git pull -r</td>
+      <td>"To fetch and rebase changes from the remote repository."</td>
+    <td>Fetches changes from the remote repository and rebases the current branch.</td>
+  
+    </tr>
+    <tr>
+      <td>39</td>
+      <td ondblclick="copyToClipboard(this)">git pull origin main</td>
+      <td>"To fetch and merge changes from the remote 'main' branch."</td>
+      <td>Fetches and merges changes from the remote 'main' branch into your local branch.</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td ondblclick="copyToClipboard(this)">git push origin main</td>
+      <td>"To push committed changes to a remote repository (e.g., on GitHub) in the 'main' branch."</td>
+      <td>Uploads the local commits to the remote repository's 'main' branch.</td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <button class="Python" onclick="downloadPythonFile()">Download Python File</button>
+        <button class="Java" onclick="downloadJavaFile()">Download Java File</button>
+        <button class="Html" onclick="downloadHtmlFile()">Download HTML File</button>
+      </td>
+    </tr>
+  </tbody>
+
+
+    </table>
+  </div>
+  <script>
+function downloadPythonFile() {
+    var pythonCode = `print("Hello, World!")`;
+    var blob = new Blob([pythonCode], { type: 'text/plain' });
+    var link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'hello.py';
+    link.click();
+}
+
+function downloadJavaFile() {
+    var javaCode = `public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}`;
+    var blob = new Blob([javaCode], { type: 'text/plain' });
+    var link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'HelloWorld.java';
+    link.click();
+}
+
+function downloadHtmlFile() {
+    var htmlCode = `<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+</body>
+</html>`;
+    var blob = new Blob([htmlCode], { type: 'text/plain' });
+    var link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'index.html';
+    link.click();
+}
+
+ function copyToClipboard(cell) {
+            const text = cell.textContent;
+            navigator.clipboard.writeText(text)
+                .then(() => {
+                    console.log('Text copied to clipboard:', text);
+                    showAlert('Text copied to clipboard: ' + text, 2000); // Show alert for 2 seconds
+                })
+                .catch(err => {
+                    console.error('Error copying text:', err);
+                    showAlert('Error copying text', 2000); // Show alert for 2 seconds
+                });
+        }
+
+       function showAlert(message, duration) {
+    const alertBox = document.createElement('div');
+    alertBox.style.position = 'fixed';
+    alertBox.style.top = '10%';
+    alertBox.style.left = '50%';
+	alertBox.style.transform = 'translate(-50%, -50%)';
+    alertBox.style.fontSize = '20px';
+    alertBox.style.padding = '10px 20px 10px 20px';
+    alertBox.style.color = 'white';
+    alertBox.style.background = 'linear-gradient(45deg, #2b2f73, #405cf5)';
+    alertBox.style.border = 'none';
+    alertBox.style.borderRadius = '5px';
+    alertBox.style.cursor = 'pointer';
+    alertBox.style.transition = 'all 0.3s ease';
+    alertBox.textContent = message;
+    document.body.appendChild(alertBox);
+
+    setTimeout(() => {
+        alertBox.remove();
+    }, duration);
+}
+
+</script>
+
+</body>
+</html>
